@@ -4,9 +4,15 @@ import matplotlib.pyplot as plt
 import tensorflow as tf
 from core.models.fno_2d.fno2d_model import FNO2D
 from core.data.fnodataloader import FNOData2D
+import warnings
+
+warnings.filterwarnings('ignore')			
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'			
+tf.get_logger().setLevel('ERROR')
+
 
 class FNOTrainer:
-    def __init__(self, epochs=100, batch_size=20, output_dir="output/fno_2d/exp4"):
+    def __init__(self, epochs=10, batch_size=20, output_dir="output/fno_2d/exp4"):
         self.epochs = epochs
         self.batch_size = batch_size
         self.output_dir = output_dir

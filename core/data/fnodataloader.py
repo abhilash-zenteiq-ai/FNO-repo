@@ -2,7 +2,7 @@ import numpy as np
 import gdown
 import os
 from core.data.fno_dataset import generate_data
-from core.data.dataset_eps import generate_data_eps
+# from core.data.dataset_eps import generate_data_eps
 
 # ==== Dataloader for FNO_1D ====
 def FNOData1D(drive_input, output_file_name):
